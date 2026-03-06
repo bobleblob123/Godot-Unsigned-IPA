@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b5iq3rlyqhhh7"]
+
+[ext_resource type="Script" uid="uid://d35l3fuod0q02" path="res://src/2D_Player.gd" id="1_yqp6d"]
+[ext_resource type="Texture2D" uid="uid://dg1an4sl0u5uh" path="res://src/Sprites/Individual frames/1/Back/Pera_Albedo.0001_Back.png" id="2_ncs0c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j4g83"]
+size = Vector3(1, 1.6743164, 1.5360718)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ehvfd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yp3qr"]
+transparency = 1
+albedo_texture = ExtResource("2_ncs0c")
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1298541621]
+script = ExtResource("1_yqp6d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1607212899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92304003, 0.00485003)
+shape = SubResource("BoxShape3D_j4g83")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2127397277]
+transform = Transform3D(-0.041805875, 0.9991257, 0, -0.012328328, -0.0005158475, -0.9999238, -0.9990497, -0.041802697, 0.012339116, -0.00021624565, 0.9867815, 0.004286051)
+mesh = SubResource("PlaneMesh_ehvfd")
+surface_material_override/0 = SubResource("StandardMaterial3D_yp3qr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=417862081]
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1665791294]
+transform = Transform3D(0.09964143, 0.063414834, 0.99300057, 0.04109362, 0.99685335, -0.06778437, -0.9941745, 0.04756012, 0.09672195, 1.4386394, 0.85995543, 0.17055178)
+visible = false

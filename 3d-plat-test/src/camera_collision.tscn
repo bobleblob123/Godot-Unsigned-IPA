@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dgodwawfb0fla"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fblyu"]
+size = Vector3(25.639893, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" unique_id=688569598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2130127, 0, 0)
+shape = SubResource("BoxShape3D_fblyu")

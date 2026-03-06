@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://0iwv4pk1vom6"]
+
+[ext_resource type="Script" uid="uid://d0fmvwhabobp" path="res://rigid_body_3d.gd" id="1_8s6hg"]
+[ext_resource type="Texture2D" uid="uid://c83a2kg82k72b" path="res://src/Sprites/Tippi/tippi_1.png" id="2_bu315"]
+[ext_resource type="Texture2D" uid="uid://3hi0h0dxgril" path="res://src/Sprites/Tippi/tippi_1_r.png" id="3_db7lr"]
+[ext_resource type="Texture2D" uid="uid://cvm5k8eb3ap3a" path="res://src/Sprites/Tippi/tippi_l_2.png" id="4_qjlmp"]
+[ext_resource type="Texture2D" uid="uid://n7tipf1gteys" path="res://src/Sprites/Tippi/Tippi_l_1.png" id="5_r46im"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_06w0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bu315")
+}],
+"loop": true,
+"name": &"default_l",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_db7lr")
+}],
+"loop": true,
+"name": &"default_r",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qjlmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r46im")
+}],
+"loop": true,
+"name": &"run_l",
+"speed": 4.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2bsll"]
+size = Vector3(8.257446, 7.6428223, 1)
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=712937587]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+script = ExtResource("1_8s6hg")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1930293562]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+sprite_frames = SubResource("SpriteFrames_06w0l")
+animation = &"run_l"
+frame_progress = 0.25190425
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1333917224]
+transform = Transform3D(0.40000004, 0, 0, 0, 0.40000004, 0, 0, 0, 0.40000004, -0.11921391, -1.83833, 0)
+shape = SubResource("BoxShape3D_2bsll")

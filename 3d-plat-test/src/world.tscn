@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://tkna8iurjic2"]
+
+[ext_resource type="Script" uid="uid://d27gm3ptpent5" path="res://src/world.gd" id="1_t101k"]
+[ext_resource type="PackedScene" uid="uid://8xu3y0obfg54" path="res://src/platform.tscn" id="1_tp5op"]
+[ext_resource type="PackedScene" uid="uid://bsyfou5qp3jct" path="res://src/2D_player.tscn" id="2_xlegt"]
+[ext_resource type="PackedScene" uid="uid://hgy7qwf22mpo" path="res://src/Tree.tscn" id="3_0qwtu"]
+[ext_resource type="PackedScene" uid="uid://cggqb75a8w8r" path="res://addons/debug_menu/debug_menu.tscn" id="5_36ipd"]
+[ext_resource type="AudioStream" uid="uid://d4md6aso4fotc" path="res://src/Audio/SE1_P_MARIO_JUMP1.wav" id="6_jvefd"]
+[ext_resource type="AudioStream" uid="uid://bc8r38nl716qe" path="res://src/Audio/Lineland Road - Super Paper Mario.mp3" id="6_usxdn"]
+[ext_resource type="PackedScene" uid="uid://bkjyoxks768c5" path="res://src/HUD.tscn" id="8_53egh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_36ipd"]
+size = Vector3(72.29004, 29.687073, 114.12966)
+
+[node name="world" type="Node3D" unique_id=619291847]
+script = ExtResource("1_t101k")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=960813044]
+transform = Transform3D(-0.9783479, -0.023657821, 0.20561093, 0.033945616, 0.9616502, 0.27217022, -0.20416474, 0.27325672, -0.9400253, 0.049809456, -10.789847, -102.120865)
+
+[node name="Platform" parent="." unique_id=269097162 instance=ExtResource("1_tp5op")]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1.0000001, 0, -1.0000001, 0, -4.371139e-08, 0.049809456, 0.21503925, -2.0363655)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Platform" unique_id=1076707516]
+transform = Transform3D(1, 0, 3.8546943e-12, 0, 1, 0, -3.8546943e-12, 0, 1, 43.39022, 6.3775024, 0.9636339)
+shape = SubResource("BoxShape3D_36ipd")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Platform" unique_id=1679669776]
+transform = Transform3D(1, 0, 4.952483e-12, 0, 1, 0, -4.952483e-12, 0, 1, -43.599922, 3.6309743, 1.2364173)
+shape = SubResource("BoxShape3D_36ipd")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Platform" unique_id=2058531220]
+transform = Transform3D(1, 0, 4.295231e-12, 0, 1, 0, -4.295231e-12, 0, 1, 2.3309743, 7.4801855, -89.41791)
+shape = SubResource("BoxShape3D_36ipd")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Platform" unique_id=495160232]
+transform = Transform3D(1, 0, 3.8902215e-12, 0, 1, 0, -3.8902215e-12, 0, 1, 2.3309667, -0.4858331, 86.17128)
+shape = SubResource("BoxShape3D_36ipd")
+
+[node name="Mario" parent="." unique_id=1298541621 instance=ExtResource("2_xlegt")]
+transform = Transform3D(0.050993796, 0, -0.99869883, 0, 1, 0, 0.99869883, 0, 0.050993796, -0.57513905, 8.287088, -18.98721)
+
+[node name="Camera3D" parent="Mario" index="2" unique_id=745403321]
+transform = Transform3D(0.01028157, -0.05528139, -0.99841803, 0.0005692468, 0.99847084, -0.055278443, 0.99994725, 2.7939677e-09, 0.010297313, -12.238012, -0.5335846, 0.35802162)
+
+[node name="Tree2" parent="." unique_id=1856119500 instance=ExtResource("3_0qwtu")]
+transform = Transform3D(-0.05113324, 0.00040142293, 0.9986917, -0.046745777, 0.9989029, -0.002794894, -0.99759734, -0.046827525, -0.05105839, -2.9875526, 14.773211, -2.0729456)
+
+[node name="Tree3" parent="." unique_id=1757807670 instance=ExtResource("3_0qwtu")]
+transform = Transform3D(-0.05113324, 0.00040142293, 0.9986917, -0.046745777, 0.9989029, -0.002794894, -0.99759734, -0.046827525, -0.05105839, 20.080338, 14.773211, -2.0729456)
+
+[node name="CanvasLayer" parent="." unique_id=1674644376 instance=ExtResource("5_36ipd")]
+
+[node name="JUMP" type="AudioStreamPlayer" parent="." unique_id=311523342]
+stream = ExtResource("6_jvefd")
+
+[node name="BGM" type="AudioStreamPlayer" parent="." unique_id=1871236444]
+stream = ExtResource("6_usxdn")
+autoplay = true
+
+[node name="CanvasLayer2" parent="." unique_id=1305491004 instance=ExtResource("8_53egh")]
+
+[editable path="Platform"]
+[editable path="Mario"]

@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bkjyoxks768c5"]
+
+[ext_resource type="FontFile" uid="uid://bd7a4eylopftg" path="res://src/Font/PopJoy.otf" id="1_1jgmh"]
+[ext_resource type="Texture2D" uid="uid://c1m8lt2f137g2" path="res://src/UI/tex1_160x56_b5ae01a2560931f7_5.png" id="2_4o0b2"]
+[ext_resource type="Texture2D" uid="uid://b0j74h3428ag3" path="res://src/UI/tex1_216x56_ba664351672660cb_5.png" id="3_vy0aa"]
+[ext_resource type="FontFile" uid="uid://bb6ir2ftgc0hv" path="res://src/Fonts/PopJoy.otf" id="4_1wma2"]
+[ext_resource type="Texture2D" uid="uid://cpsrwssd40iwi" path="res://src/UI/tex1_160x56_d999449f4e1f8a4b_5.png" id="5_b3iax"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1305491004]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=900044101]
+offset_left = 66.0
+offset_top = 35.0
+offset_right = 360.2857
+offset_bottom = 138.0
+texture = ExtResource("2_4o0b2")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=147756379]
+z_index = 1
+layout_mode = 0
+offset_left = 112.0
+offset_top = 23.0
+offset_right = 1365.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1jgmh")
+theme_override_font_sizes/font_size = 50
+text = "10/10"
+
+[node name="Label2" type="Label" parent="TextureRect" unique_id=145557856]
+z_index = 1
+layout_mode = 0
+offset_left = 108.0
+offset_top = 25.0
+offset_right = 1361.0
+offset_bottom = 275.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_1jgmh")
+theme_override_font_sizes/font_size = 50
+text = "10/10"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1652952491]
+offset_left = 745.0
+offset_top = 30.0
+offset_right = 1161.5714
+offset_bottom = 138.0
+texture = ExtResource("3_vy0aa")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect2" unique_id=1623668686]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 33.0
+offset_right = 394.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_1wma2")
+theme_override_font_sizes/font_size = 50
+text = "0000000"
+
+[node name="Label2" type="Label" parent="TextureRect2" unique_id=669216197]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 34.0
+offset_right = 390.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("4_1wma2")
+theme_override_font_sizes/font_size = 50
+text = "0000000"
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1593618224]
+offset_left = 1535.0
+offset_top = 27.0
+offset_right = 1849.2856
+offset_bottom = 137.0
+texture = ExtResource("5_b3iax")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect3" unique_id=1751504920]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 34.0
+offset_right = 323.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_1wma2")
+theme_override_font_sizes/font_size = 50
+text = "000"
+
+[node name="Label2" type="Label" parent="TextureRect3" unique_id=1617364175]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 34.0
+offset_right = 320.0
+offset_bottom = 95.0
+theme_override_fonts/font = ExtResource("4_1wma2")
+theme_override_font_sizes/font_size = 50
+text = "000"

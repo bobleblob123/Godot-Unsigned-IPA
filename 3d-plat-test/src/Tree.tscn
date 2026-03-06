@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://hgy7qwf22mpo"]
+
+[ext_resource type="Texture2D" uid="uid://cluket3i666mp" path="res://src/Sprites/SPM/tree2.png" id="1_mwpmr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rc2ur"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsq4y"]
+transparency = 1
+albedo_texture = ExtResource("1_mwpmr")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hv8xl"]
+material = SubResource("StandardMaterial3D_nsq4y")
+size = Vector2(36, 20)
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1298541621]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1607212899]
+shape = SubResource("SphereShape3D_rc2ur")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1810166857]
+transform = Transform3D(0.04884981, 0.9988061, -7.628974e-10, -0.00871611, 0.0004262886, -0.99996185, -0.99876803, 0.048847955, 0.008726529, 0, 0, 0)
+mesh = SubResource("PlaneMesh_hv8xl")
