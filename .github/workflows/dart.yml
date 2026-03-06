@@ -3,7 +3,7 @@ name: Build iOS IPA
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-ios:
@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
+      - name: Generate Build Name
+        id: buildname
+        run: echo "name=$(date +'%Y-%m-%d')_Greenville" >> "$GITHUB_OUTPUT"
 
       - name: Install Godot
         id: godot
@@ -52,5 +56,5 @@ jobs:
       - name: Upload IPA Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ios_project.ipa
+          name: ${{ steps.buildname.outputs.name }}
           path: build/ios_project.xcarchive/Products/ios_project.ipa
